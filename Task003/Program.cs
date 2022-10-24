@@ -14,25 +14,26 @@ void PrintImage(int[,]image)
         Console.WriteLine();
     }
 }
-void FormImage(int[,]image, int k)
+void ResizeImage(int[,]image, int k)
 {
-    for(int i = 0; i < image.GetLength(0); i++)
-    {
-        for(int j = 0; j < image.GetLength(1); j++)
-        {
-          i = i * k;
-          j = j * k;
-        }
-    }
+    
+        
 }
-int[,]image = new int[,]
+
+void FillImage(int x, int y)
 {
-    {1, 0, 1, 0},
-    {0, 0, 0, 0},
-    {1, 0, 1, 0},
-    {0, 0, 0, 0},
-};
-PrintImage(image);
-Console.WriteLine("Масштабирование - ");
-FormImage(image, 2);
+    image[0,0] = 1;
+}
+
+int[,]image = new int[3,3];
+
+//PrintImage(image);
+//Console.WriteLine("Масштабирование - ");
+image[0,0] = 1;
+image[2,0] = 1;
+image[2,2] = 1;
+image[0,2] = 1;
+Console.WriteLine();
+//ResizeImage(0, 0, 4);
+FillImage(0,0);
 PrintImage(image);
