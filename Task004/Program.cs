@@ -2,9 +2,8 @@
 
 void FillArray(int[]array, int min, int max)
 {
-    Random random = new Random();
     for(int i = 0; i < array.Length; i++)
-        array[i] = random.Next(min, max);
+        array[i] = new Random().Next(min, max);
 }
 void PrintArray(int[]array)
 {
@@ -17,11 +16,11 @@ void CopyArray(int[]array)
     for(int i = 0; i < array.Length; i++)
     {
         for(int j = 0; j < array.Length; j++)
-            {
                 if(j == i)
                     array[j] = array[i];
-            }
+
     }
+    PrintArray(array);
 }
 void PrintCopyArray(int[]array)
 {
@@ -37,6 +36,5 @@ int[]array = new int[length];
 FillArray(array, 1, 10);
 Console.WriteLine("Ваш массив: ");
 PrintArray(array);
-CopyArray(array);
 Console.WriteLine("Копия массива: ");
-PrintCopyArray(array);
+CopyArray(array);
