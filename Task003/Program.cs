@@ -3,9 +3,13 @@
 
 
 Console.WriteLine("Введите координаты вершин фигуры списком: ");
-string point = Convert.ToString(Console.ReadLine() ?? "0");
+string point =  String.Empty;
+point = Convert.ToString(Console.ReadLine() ?? "0");
+//int[] x = new int[4];
+//int[] y = new int[4];
+int x1 = Convert.ToInt32(point[6]);
 //PrintArray(point);
-Console.WriteLine(point[6]);
+Console.WriteLine(x1);
 
 
 
