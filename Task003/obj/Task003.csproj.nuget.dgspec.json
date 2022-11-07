@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6\\Seminar18.10.22-dz\\Task003\\Task003.csproj": {}
+    "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6-new\\Seminar18.10.22-dz\\Task003\\Task003.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6\\Seminar18.10.22-dz\\Task003\\Task003.csproj": {
+    "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6-new\\Seminar18.10.22-dz\\Task003\\Task003.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6\\Seminar18.10.22-dz\\Task003\\Task003.csproj",
+        "projectUniqueName": "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6-new\\Seminar18.10.22-dz\\Task003\\Task003.csproj",
         "projectName": "Task003",
-        "projectPath": "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6\\Seminar18.10.22-dz\\Task003\\Task003.csproj",
+        "projectPath": "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6-new\\Seminar18.10.22-dz\\Task003\\Task003.csproj",
         "packagesPath": "C:\\Users\\Анна\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6\\Seminar18.10.22-dz\\Task003\\obj\\",
+        "outputPath": "C:\\Users\\Анна\\Documents\\ДЗ-Семинар-6-new\\Seminar18.10.22-dz\\Task003\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Анна\\AppData\\Roaming\\NuGet\\NuGet.Config"
