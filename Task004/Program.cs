@@ -2,39 +2,31 @@
 
 void FillArray(int[]array, int min, int max)
 {
+    Random random = new Random();
     for(int i = 0; i < array.Length; i++)
-        array[i] = new Random().Next(min, max);
+        array[i] = random.Next(min, max);
 }
 void PrintArray(int[]array)
 {
     for(int i = 0; i < array.Length; i++)
-        Console.Write($"{array[i]}");
+        Console.Write($"{array[i]} ");
     Console.WriteLine();
 }
-void CopyArray(int[]array)
+void CopyArray(int[] copy, int[] array)
 {
     for(int i = 0; i < array.Length; i++)
     {
-        for(int j = 0; j < array.Length; j++)
-                if(j == i)
-                    array[j] = array[i];
-
+        copy[i] = array[i];
     }
-    PrintArray(array);
 }
-void PrintCopyArray(int[]array)
-{
-    for(int j = 0; j < array.Length; j++)
-        Console.Write($"{array[j]}");
-    Console.WriteLine();
-}
-
 
 Console.WriteLine("Введите длину массива: ");
 int length = int.Parse(Console.ReadLine() ?? "0");
-int[]array = new int[length];
+int[] array = new int[length];
 FillArray(array, 1, 10);
 Console.WriteLine("Ваш массив: ");
 PrintArray(array);
+int[] copy = new int[length];
+CopyArray(copy, array);
 Console.WriteLine("Копия массива: ");
-CopyArray(array);
+PrintArray(copy);
