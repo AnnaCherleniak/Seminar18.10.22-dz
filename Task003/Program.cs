@@ -1,5 +1,52 @@
 ﻿// 3. Написать программу масштабирования фигуры (0,0)(2,0)(2,2)(0,2)
-
+void CoordinatesX(string text, int[] array)
+{
+    string t = String.Empty;
+    int j = 0;
+    for(int i = 0; i < text.Length; i++)
+    {
+        if(text[i] == '(')
+        {
+            i++;
+            if(j < array.Length)
+            {
+                var point = t;
+                while(text[i] != ',')
+                {
+                    point += $"{text[i]}";
+                    i++;
+                }
+                int temp = int.Parse(point);
+                array[j] = temp;
+                j++;
+            }
+        }
+    }
+}
+void CoordinatesY(string text, int[] array)
+{
+    string t = String.Empty;
+    int j = 0;
+    for(int i = 0; i < text.Length; i++)
+    {
+        if(text[i] == ',')
+        {
+            i++;
+            if(j < array.Length)
+            {
+                var point = t;
+                while(text[i] != ')')
+                {
+                    point += $"{text[i]}";
+                    i++;
+                }
+                int temp = int.Parse(point);
+                array[j] = temp;
+                j++;
+            }
+        }
+    }
+}
 int CountCoordinates(string text, char c)
 {
     int count = 0;
@@ -18,47 +65,12 @@ int length = CountCoordinates(text, ',');
 string t = String.Empty;
 int[] x = new int[length];
 int[] y = new int[length];
-int j = 0;
-int k = 0;
-for(int i = 0; i < text.Length; i++)
-{
-    if(text[i] == '(')
-    {
-        i++;
-        if(j < length)
-        {
-            var point = t;
-            while(text[i] != ',')
-            {
-                point += $"{text[i]}";
-                i++;
-            }
-            int temp = int.Parse(point);
-            x[j] = temp;
-            j++;
-        }
-    }
-    if(text[i] == ',')
-    {
-        i++;
-        if(k < length)
-        {
-            var point = t;
-            while(text[i] != ')')
-            {
-                point += $"{text[i]}";
-                i++;
-            }
-            int temp = int.Parse(point);
-            y[k] = temp;
-            k++;
-        }
-    }
-}
+CoordinatesX(text, x);
+CoordinatesY(text, y);
 Console.WriteLine("Введите коэффициент масштабированик: ");
-int n = int.Parse(Console.ReadLine() ?? "0");
-ResizeFigure(x, n);
-ResizeFigure(y, n);
+int k = int.Parse(Console.ReadLine() ?? "0");
+ResizeFigure(x, k);
+ResizeFigure(y, k);
 for(int i = 0; i < x.Length; i++)
     Console.Write($"({x[i]},{y[i]}) ");
 Console.WriteLine();
