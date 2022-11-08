@@ -23,6 +23,10 @@ string points = Replase(text, '(', ' ');
 points = Replase(points, ')', ' ');
 points = Replase(points, ',', ' ');
 Console.WriteLine(points);
+var pointX = $"{points[1]}" + $"{points[2]}";
+int x = int.Parse(pointX);
+Console.WriteLine(pointX);
+Console.WriteLine(x);
 
 
 
